@@ -4,6 +4,7 @@ from typing import Any, Dict, Optional, Tuple
 import csv
 
 import requests
+from .team_map import load_team_map_from_target_html
 
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
@@ -28,6 +29,11 @@ class VfPoller:
         self.last_matches: Optional[Dict[str, Any]] = None
         self.jsonl_path = jsonl_path
         self.csv_path = csv_path
+        # Load team map once
+        try:
+            self.team_map = load_team_map_from_target_html("target.html")
+        except Exception:
+            self.team_map = {}
 
     def timings_url(self) -> str:
         return f"{self.base_url}/vflmshop/timeline/get-timings/get-timings.json"
@@ -198,10 +204,14 @@ class VfPoller:
             with open(self.csv_path, "a", encoding="utf-8", newline="") as f:
                 writer = csv.writer(f)
                 if is_new:
-                    writer.writerow(["type", "competition_id", "match_id", "chunk_id", "betstop", "start", "end", "home_club_id", "away_club_id"])
+                    writer.writerow(["type", "competition_id", "match_id", "chunk_id", "betstop", "start", "end", "home_club_id", "home_name", "away_club_id", "away_name"])
                 for ch in matches.get("channels", []):
                     for m in ch.get("matches", []):
                         vm = m.get("vmatch_group", {})
+                        hid = vm.get("home_club_id")
+                        aid = vm.get("away_club_id")
+                        hname = self.team_map.get(int(hid)) if isinstance(hid, int) else None
+                        aname = self.team_map.get(int(aid)) if isinstance(aid, int) else None
                         writer.writerow([
                             "matches",
                             competition_id,
@@ -210,8 +220,10 @@ class VfPoller:
                             m.get("betstop_datetime"),
                             m.get("start_datetime"),
                             m.get("end_datetime"),
-                            vm.get("home_club_id"),
-                            vm.get("away_club_id"),
+                            hid,
+                            hname or "",
+                            aid,
+                            aname or "",
                         ])
         except Exception:
             pass
