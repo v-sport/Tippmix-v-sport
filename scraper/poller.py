@@ -21,10 +21,11 @@ def _http_get(url: str, timeout: int = 15) -> Tuple[int, Dict[str, Any], Dict[st
 
 
 class VfPoller:
-    def __init__(self, base_url: str = VF_BASE) -> None:
+    def __init__(self, base_url: str = VF_BASE, jsonl_path: Optional[str] = None) -> None:
         self.base_url = base_url.rstrip("/")
         self.last_timings: Optional[Dict[str, Any]] = None
         self.last_matches: Optional[Dict[str, Any]] = None
+        self.jsonl_path = jsonl_path
 
     def timings_url(self) -> str:
         return f"{self.base_url}/vflmshop/timeline/get-timings/get-timings.json"
@@ -119,6 +120,11 @@ class VfPoller:
                     aend = ch.get("active_phase_end_datetime")
                     summary.append(f"ch:match={mid} next={next_mid} phase_end={aend}")
                 print(f"[VF] timings update: server={server_ts} | " + "; ".join(summary))
+                self._write_jsonl({
+                    "type": "timings",
+                    "server_datetime": server_ts,
+                    "payload": timings,
+                })
 
             if fresh_matches:
                 self.last_matches = matches
@@ -129,11 +135,26 @@ class VfPoller:
                 except Exception:
                     total = 0
                 print(f"[VF] matches update: competition_id={comp_id} entries={total}")
+                self._write_jsonl({
+                    "type": "matches",
+                    "competition_id": comp_id,
+                    "payload": matches,
+                })
 
             delay_ms = self._next_poll_delay_ms(timings, server_ts)
             if once:
                 return
             time.sleep(delay_ms / 1000.0)
+
+    def _write_jsonl(self, obj: Dict[str, Any]) -> None:
+        if not self.jsonl_path:
+            return
+        try:
+            with open(self.jsonl_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(obj, ensure_ascii=False) + "\n")
+        except Exception:
+            # best-effort logging only
+            pass
 
 
 def main_once() -> None:
