@@ -10,7 +10,11 @@ V-sport tipp adó bot telegramra és adat kaparás
 ### Run
 
 ```
-python -m scraper.cli           # quick check endpoints + widgets loader
-python -m scraper.cli poll      # start continuous poller
-python -m scraper.cli poll-once # fetch single snapshot and exit
+python -m scraper.cli                    # quick check endpoints + widgets loader
+python -m scraper.cli poll               # start continuous poller
+python -m scraper.cli poll-once          # fetch single snapshot and exit
+
+# with sinks
+python -m scraper.cli poll-once events.jsonl events.csv
+python -m scraper.cli poll events.jsonl events.csv
 ```

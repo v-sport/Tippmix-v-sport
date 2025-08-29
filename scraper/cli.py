@@ -54,11 +54,14 @@ def main() -> int:
     if len(sys.argv) > 1 and sys.argv[1] in {"poll", "poll-once"}:
         once = sys.argv[1] == "poll-once"
         jsonl_path = None
-        # optional: python -m scraper.cli poll logs.jsonl
+        csv_path = None
+        # optional: python -m scraper.cli poll logs.jsonl logs.csv
         if len(sys.argv) > 2:
             jsonl_path = sys.argv[2]
+        if len(sys.argv) > 3:
+            csv_path = sys.argv[3]
         try:
-            VfPoller(jsonl_path=jsonl_path).run(once=once)
+            VfPoller(jsonl_path=jsonl_path, csv_path=csv_path).run(once=once)
             return 0
         except KeyboardInterrupt:
             return 0
@@ -70,7 +73,7 @@ def main() -> int:
     ok_vsw = test_vswidgets_loader()
     all_ok = ok_vf and ok_vsw
     print("[RESULT] Selenium required:", "NO" if all_ok else "UNKNOWN/REVIEW")
-    print("Usage: python -m scraper.cli poll [events.jsonl] | poll-once [events.jsonl]")
+    print("Usage: python -m scraper.cli poll [events.jsonl] [events.csv] | poll-once [events.jsonl] [events.csv]")
     return 0 if all_ok else 1
 
 

@@ -1,6 +1,7 @@
 import time
 import json
 from typing import Any, Dict, Optional, Tuple
+import csv
 
 import requests
 
@@ -21,11 +22,12 @@ def _http_get(url: str, timeout: int = 15) -> Tuple[int, Dict[str, Any], Dict[st
 
 
 class VfPoller:
-    def __init__(self, base_url: str = VF_BASE, jsonl_path: Optional[str] = None) -> None:
+    def __init__(self, base_url: str = VF_BASE, jsonl_path: Optional[str] = None, csv_path: Optional[str] = None) -> None:
         self.base_url = base_url.rstrip("/")
         self.last_timings: Optional[Dict[str, Any]] = None
         self.last_matches: Optional[Dict[str, Any]] = None
         self.jsonl_path = jsonl_path
+        self.csv_path = csv_path
 
     def timings_url(self) -> str:
         return f"{self.base_url}/vflmshop/timeline/get-timings/get-timings.json"
@@ -125,6 +127,7 @@ class VfPoller:
                     "server_datetime": server_ts,
                     "payload": timings,
                 })
+                self._write_csv_timings(server_ts, channels)
 
             if fresh_matches:
                 self.last_matches = matches
@@ -140,6 +143,7 @@ class VfPoller:
                     "competition_id": comp_id,
                     "payload": matches,
                 })
+                self._write_csv_matches(comp_id, matches)
 
             delay_ms = self._next_poll_delay_ms(timings, server_ts)
             if once:
@@ -154,6 +158,62 @@ class VfPoller:
                 f.write(json.dumps(obj, ensure_ascii=False) + "\n")
         except Exception:
             # best-effort logging only
+            pass
+
+    def _write_csv_timings(self, server_ts: Optional[int], channels: Any) -> None:
+        if not self.csv_path:
+            return
+        try:
+            is_new = False
+            try:
+                with open(self.csv_path, "r", encoding="utf-8"):
+                    pass
+            except FileNotFoundError:
+                is_new = True
+            with open(self.csv_path, "a", encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                if is_new:
+                    writer.writerow(["type", "server_datetime", "channel_match_id", "channel_next_match_id", "active_phase_end"])
+                for ch in channels:
+                    writer.writerow([
+                        "timings",
+                        server_ts,
+                        ch.get("match_id"),
+                        ch.get("next_match_id"),
+                        ch.get("active_phase_end_datetime"),
+                    ])
+        except Exception:
+            pass
+
+    def _write_csv_matches(self, competition_id: int, matches: Dict[str, Any]) -> None:
+        if not self.csv_path:
+            return
+        try:
+            is_new = False
+            try:
+                with open(self.csv_path, "r", encoding="utf-8"):
+                    pass
+            except FileNotFoundError:
+                is_new = True
+            with open(self.csv_path, "a", encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                if is_new:
+                    writer.writerow(["type", "competition_id", "match_id", "chunk_id", "betstop", "start", "end", "home_club_id", "away_club_id"])
+                for ch in matches.get("channels", []):
+                    for m in ch.get("matches", []):
+                        vm = m.get("vmatch_group", {})
+                        writer.writerow([
+                            "matches",
+                            competition_id,
+                            m.get("id"),
+                            m.get("chunk_id"),
+                            m.get("betstop_datetime"),
+                            m.get("start_datetime"),
+                            m.get("end_datetime"),
+                            vm.get("home_club_id"),
+                            vm.get("away_club_id"),
+                        ])
+        except Exception:
             pass
 
 
