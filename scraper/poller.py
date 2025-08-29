@@ -10,6 +10,15 @@ from .team_map import load_team_map_from_target_html
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 VF_BASE = "https://vfscigaming.aitcloud.de"
 
+# Phase id mapping (from target.html srvg.timelinePhases)
+PHASE_ID_TO_NAME: Dict[int, str] = {
+    3: "pre_match",
+    4: "betstop",
+    5: "match",
+    6: "ticker",
+    8: "post_match",
+}
+
 
 def _http_get(url: str, timeout: int = 15) -> Tuple[int, Dict[str, Any], Dict[str, str]]:
     resp = requests.get(url, headers=HEADERS, timeout=timeout)
@@ -27,6 +36,8 @@ class VfPoller:
         self.base_url = base_url.rstrip("/")
         self.last_timings: Optional[Dict[str, Any]] = None
         self.last_matches: Optional[Dict[str, Any]] = None
+        self.last_micro: Optional[Dict[str, Any]] = None
+        self.last_maintenance: Optional[Dict[str, Any]] = None
         self.jsonl_path = jsonl_path
         self.csv_path = csv_path
         # Load team map once
@@ -34,12 +45,20 @@ class VfPoller:
             self.team_map = load_team_map_from_target_html("target.html")
         except Exception:
             self.team_map = {}
+        # Maintenance URL parsed from target.html if present
+        self.maintenance_url_str = self._infer_maintenance_url()
 
     def timings_url(self) -> str:
         return f"{self.base_url}/vflmshop/timeline/get-timings/get-timings.json"
 
     def matches_url(self, competition_id: int) -> str:
         return f"{self.base_url}/vflmshop/timeline/get-matches/get-matches.json?competition_id={competition_id}"
+
+    def micro_timings_url(self) -> str:
+        return f"{self.base_url}/vflmshop/timeline/get-micro-timings/get-micro-timings.json"
+
+    def maintenance_url(self) -> str:
+        return self.maintenance_url_str or f"{self.base_url}/vflmshop/maintenance/check?clientid=4997"
 
     def fetch_timings(self) -> Tuple[Optional[Dict[str, Any]], Optional[int]]:
         code, data, _headers = _http_get(self.timings_url())
@@ -60,6 +79,19 @@ class VfPoller:
 
     def fetch_matches(self, competition_id: int) -> Optional[Dict[str, Any]]:
         code, data, _headers = _http_get(self.matches_url(competition_id))
+        if code != 200:
+            return None
+        return data
+
+    def fetch_micro_timings(self) -> Optional[Dict[str, Any]]:
+        code, data, _headers = _http_get(self.micro_timings_url())
+        if code != 200:
+            return None
+        return data
+
+    def fetch_maintenance(self) -> Optional[Dict[str, Any]]:
+        url = self.maintenance_url()
+        code, data, _headers = _http_get(url)
         if code != 200:
             return None
         return data
@@ -104,6 +136,23 @@ class VfPoller:
                     return
                 continue
 
+            # Best-effort auxiliary endpoints
+            micro = self.fetch_micro_timings()
+            if micro and micro != self.last_micro:
+                self.last_micro = micro
+                self._write_jsonl({
+                    "type": "micro_timings",
+                    "payload": micro,
+                })
+
+            maintenance = self.fetch_maintenance()
+            if maintenance and maintenance != self.last_maintenance:
+                self.last_maintenance = maintenance
+                self._write_jsonl({
+                    "type": "maintenance",
+                    "payload": maintenance,
+                })
+
             comp_id = self.extract_competition_id(timings)
             if comp_id is None:
                 print("[VF] timings: competition_id not found")
@@ -126,7 +175,9 @@ class VfPoller:
                     mid = ch.get("match_id")
                     next_mid = ch.get("next_match_id")
                     aend = ch.get("active_phase_end_datetime")
-                    summary.append(f"ch:match={mid} next={next_mid} phase_end={aend}")
+                    phase_id = ch.get("phase_id")
+                    phase_name = PHASE_ID_TO_NAME.get(int(phase_id)) if isinstance(phase_id, int) else None
+                    summary.append(f"ch:match={mid} next={next_mid} phase={phase_name or phase_id} end={aend}")
                 print(f"[VF] timings update: server={server_ts} | " + "; ".join(summary))
                 self._write_jsonl({
                     "type": "timings",
@@ -149,7 +200,7 @@ class VfPoller:
                     "competition_id": comp_id,
                     "payload": matches,
                 })
-                self._write_csv_matches(comp_id, matches)
+                self._write_csv_matches(comp_id, matches, server_ts)
 
             delay_ms = self._next_poll_delay_ms(timings, server_ts)
             if once:
@@ -179,19 +230,23 @@ class VfPoller:
             with open(self.csv_path, "a", encoding="utf-8", newline="") as f:
                 writer = csv.writer(f)
                 if is_new:
-                    writer.writerow(["type", "server_datetime", "channel_match_id", "channel_next_match_id", "active_phase_end"])
+                    writer.writerow(["type", "server_datetime", "channel_match_id", "channel_next_match_id", "phase_id", "phase", "active_phase_end"])
                 for ch in channels:
+                    phase_id = ch.get("phase_id")
+                    phase_name = PHASE_ID_TO_NAME.get(int(phase_id)) if isinstance(phase_id, int) else None
                     writer.writerow([
                         "timings",
                         server_ts,
                         ch.get("match_id"),
                         ch.get("next_match_id"),
+                        phase_id,
+                        phase_name or "",
                         ch.get("active_phase_end_datetime"),
                     ])
         except Exception:
             pass
 
-    def _write_csv_matches(self, competition_id: int, matches: Dict[str, Any]) -> None:
+    def _write_csv_matches(self, competition_id: int, matches: Dict[str, Any], server_ts: Optional[int]) -> None:
         if not self.csv_path:
             return
         try:
@@ -204,7 +259,7 @@ class VfPoller:
             with open(self.csv_path, "a", encoding="utf-8", newline="") as f:
                 writer = csv.writer(f)
                 if is_new:
-                    writer.writerow(["type", "competition_id", "match_id", "chunk_id", "betstop", "start", "end", "home_club_id", "home_name", "away_club_id", "away_name"])
+                    writer.writerow(["type", "competition_id", "match_id", "chunk_id", "betstop", "start", "end", "status", "home_club_id", "home_name", "away_club_id", "away_name"])
                 for ch in matches.get("channels", []):
                     for m in ch.get("matches", []):
                         vm = m.get("vmatch_group", {})
@@ -212,6 +267,19 @@ class VfPoller:
                         aid = vm.get("away_club_id")
                         hname = self.team_map.get(int(hid)) if isinstance(hid, int) else None
                         aname = self.team_map.get(int(aid)) if isinstance(aid, int) else None
+                        status = ""
+                        try:
+                            if isinstance(server_ts, int):
+                                sd = int(m.get("start_datetime") or 0)
+                                ed = int(m.get("end_datetime") or 0)
+                                if server_ts >= ed:
+                                    status = "finished"
+                                elif server_ts >= sd:
+                                    status = "live"
+                                else:
+                                    status = "upcoming"
+                        except Exception:
+                            status = ""
                         writer.writerow([
                             "matches",
                             competition_id,
@@ -220,6 +288,7 @@ class VfPoller:
                             m.get("betstop_datetime"),
                             m.get("start_datetime"),
                             m.get("end_datetime"),
+                            status,
                             hid,
                             hname or "",
                             aid,
@@ -227,6 +296,21 @@ class VfPoller:
                         ])
         except Exception:
             pass
+
+    def _infer_maintenance_url(self) -> Optional[str]:
+        try:
+            with open("target.html", "r", encoding="utf-8") as f:
+                text = f.read()
+            import re
+            m = re.search(r"maintenanceCheck\.url\s*=\s*\"([^\"]+)\"", text)
+            if m:
+                rel = m.group(1)
+                if rel.startswith("/"):
+                    return f"{self.base_url}{rel}"
+                return rel
+        except Exception:
+            return None
+        return None
 
 
 def main_once() -> None:
