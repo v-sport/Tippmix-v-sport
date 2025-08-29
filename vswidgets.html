@@ -1,0 +1,692 @@
+
+; (function(ns) {
+
+    // If the widget loader is to be re-used across solutions, the JS/CSS assets registry must be made global
+    // or directly attached to the <link> and <script> DOM elements that are inserted by the widget loader(s).
+
+    ns.assets = ns.assets || { 'js': {}, 'css': {}};
+    ns.widgets = ns.widgets || {};
+    ns.config = ns.config || [];
+
+    ns.assetIdSequence = ns.assetIdSequence || 1;
+    ns.widgetIdSequence = ns.widgetIdSequence || 1;
+
+    ns.configured = false;
+
+    var _packages = {"vswidgets":{"js":["assets\/scigamingscigamingcdn\/vswidgets\/js\/vswidgets.js"],"css":[]},"vswidgets.vf":{"js":[],"css":[]},"vswidgets.vfl":{"js":[],"css":[]},"vswidgets.vbl":{"js":[],"css":[]},"vswidgets.vto":{"js":[],"css":[]},"vswidgets.vfc":{"js":[],"css":[]},"vswidgets.vflm":{"js":[],"css":[]},"vswidgets.vfnc":{"js":[],"css":[]},"vswidgets.vfwc":{"js":[],"css":[]},"vswidgets.vti":{"js":[],"css":[]},"vswidgets.vbi":{"js":[],"css":[]},"vswidgets.vfb":{"js":[],"css":[]}};
+    var _components = {"vswidgets":["vswidgets.core.package"],"vswidgets.vf":["vswidgets.vf.package"],"vswidgets.vfl":["vswidgets.vfl.package"],"vswidgets.vbl":["vswidgets.vbl.package"],"vswidgets.vto":["vswidgets.vto.package"],"vswidgets.vfc":["vswidgets.vfc.package"],"vswidgets.vflm":["vswidgets.vflm.package"],"vswidgets.vfb":["vswidgets.vfb.package"],"vswidgets.vfnc":["vswidgets.vfnc.package"],"vswidgets.vfwc":["vswidgets.vfwc.package"],"vswidgets.vti":["vswidgets.vti.package"],"vswidgets.vfas":["vswidgets.vfas.package"],"vswidgets.vfcc":["vswidgets.vfcc.package"],"vswidgets.vbi":["vswidgets.vbi.package"]};
+    var _solution = 'vswidgets';
+    var _baseUrl = '' || inferBaseUrl();
+
+    function getAssetsPackage(widget) {
+        var parts = widget.toLowerCase().split('.');
+        for (var i = parts.length; i > 0; --i) {
+            var path = parts.slice(0, i).join('.');
+            if (_packages.hasOwnProperty(path)) {
+                return path;
+            }
+        }
+        return null;
+    }
+
+    function getComponentPackages(widget) {
+        var components = [];
+        var parts = widget.toLowerCase().split('.');
+        for (var i = 1; i < parts.length; ++i) {
+            var path = parts.slice(0, i).join('.');
+            if (_components.hasOwnProperty(path)) {
+                components = components.concat(_components[path]);
+            }
+        }
+        return components;
+    }
+
+    function getAssetUrls(package, assetType) {
+        var assets = [];
+        var parts = package.split('.');
+        for (var i = 1; i <= parts.length; ++i) {
+            var path = parts.slice(0, i).join('.');
+            if (_packages.hasOwnProperty(path)) {
+                assets = assets.concat(_packages[path][assetType]);
+            }
+        }
+
+        // we want to have the clientalias overwritten to "default"
+        for(var i=0; i<assets.length; i++) {
+            var a = assets[i].split('/');
+            a[1] = 'default';
+            assets[i] = a.join('/');
+        }
+        
+        return assets;
+    }
+
+    function getAssets(package, assetType) {
+        var assets = [];
+        var assetUrls = getAssetUrls(package, assetType);
+        for (var i = 0; i < assetUrls.length; ++i) {
+            var asset = ns.assets[assetType][assetUrls[i]];
+            if (!asset) {
+                continue;
+            }
+            assets.push(asset);
+        }
+        return assets;
+    }
+
+    function constructAssetId() {
+        return 'sr-asset-' + 'vswidgets' + '-' + (ns.assetIdSequence++);
+    }
+
+    function constructWidgetId() {
+        return 'sr-widget-' + 'vswidgets' + '-' + (ns.widgetIdSequence++);
+    }
+
+    function constructAsset(assetType, url) {
+        return {
+            id: constructAssetId(),
+            url: url,
+            type: assetType,
+            loaded: false,
+            callbacks: []
+        };
+    }
+
+    function constructReferenceKey(package) {
+        return _solution + '::' + package;
+    }
+
+    function addReference(asset, package) {
+        var key = constructReferenceKey(package);
+        if (!asset.references) {
+            asset.references = {};
+        }
+        asset.references[key] = true;
+    }
+
+    function removeReference(asset, package) {
+        var key = constructReferenceKey(package);
+        if (asset.references) {
+            delete asset.references[key];
+        }
+    }
+
+    function removeAllReferences(asset) {
+        var prefix = _solution + '::';
+        var keys = Object.keys(asset.references || {});
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            if (key.indexOf(prefix) == 0) {
+                delete asset.references[key];
+            }
+        }
+    }
+
+    function getRefCount(asset) {
+        return asset.references ? Object.keys(asset.references).length : 0;
+    }
+
+    function injectCSSAssets(package) {
+        var styleSheetUrls = getAssetUrls(package, 'css');
+        for (var i = 0; i < styleSheetUrls.length; ++i) {
+            // check if the dependency is already loaded
+            var url = _baseUrl + styleSheetUrls[i];
+            var asset = ns.assets.css[url];
+
+            if (!asset) {
+                // prevent further loading of this asset by creating an entry for it
+                asset = ns.assets.css[url] = constructAsset('css', url);
+
+                // no onload event available, thus no callback
+                var head = document.getElementsByTagName('head')[0];
+                var l = document.createElement('link');
+
+                l.id = asset.id;
+                l.type = 'text/css';
+                l.rel = 'stylesheet';
+                l.href = url;
+
+                head.appendChild(l);
+                asset.loaded = true;
+            }
+            addReference(asset, package);
+        }
+    }
+
+    function injectScript(package, url, callback) {
+        var asset = ns.assets.js[url];
+        if (asset) {
+            // track the reference
+            addReference(asset, package);
+            // the dependency is either already loaded or is loading
+            if (asset.loaded) {
+                if (callback) callback();
+            }
+            else {
+                asset.callbacks.push(callback);
+            }
+            return;
+        }
+
+        asset = ns.assets.js[url] = constructAsset('js', url);
+        asset.callbacks.push(callback);
+        addReference(asset, package);
+
+        // Add JavaScript file to the DOM
+        var head = document.getElementsByTagName('head')[0];
+        var s = document.createElement('script');
+
+        s.id = asset.id;
+        s.type = 'text/javascript';
+        s.charset = 'utf-8';
+        s.src = _baseUrl + url;
+        s.async = false;
+
+        head.appendChild(s);
+
+        var readyCallback = function() {
+            var state = s.readyState;
+            if (!asset.loaded && (!state || /loaded|complete/.test(state))) {
+                asset.loaded = true;
+                for (var i = 0; i < asset.callbacks.length; ++i) {
+                    if (asset.callbacks[i]) asset.callbacks[i]();
+                }
+                asset.callbacks = [];
+                s.onreadystatechange = s.onload = null;
+            }
+        };
+
+        if (s.addEventListener) {
+            s.addEventListener('load', readyCallback, false);
+        } else if (s.readyState) {
+            s.onreadystatechange = readyCallback;
+        }
+    }
+
+    function injectJSAssets(package, callback) {
+        var scriptUrls = getAssetUrls(package, 'js');
+        var scriptCount = scriptUrls.length;
+
+        // check if there are any JS assets to load
+        if (scriptCount == 0) {
+            if (callback) callback();
+            return;
+        }
+
+        for (var i = 0; i < scriptUrls.length; ++i) {
+            // inject each JS file and notify caller when all scripts are downloaded and run
+            injectScript(package, scriptUrls[i], function() {
+                if (--scriptCount == 0 && callback) {
+                    callback();
+                }
+            });
+        }
+    }
+
+    function initSRLive() {
+        if (ns.configured || typeof SRLive === 'undefined' || !SRLive.configureClient) {
+            return;
+        }
+
+        // Initialize SRLive.  Assets packages setup and dependencies must ensure that the package containing
+        // SRLive is an explicit or implicit dependency of all other packages.  Therefore, SRLive will be
+        // loaded with the first package that adds JavaScript to the page.
+        var setup = {
+            debugLevel: parseInt('3', 10),
+            client: {
+                timezone: 'Europe/Berlin',
+                language: 'zh',
+                name: 'scigamingscigamingcdn',
+                s4_client_id: '160',
+                scoreradar_client_id: '-1'
+            },
+            widget: {
+                url: _baseUrl,
+                solution: _solution,
+                setupOverridesOptions: false,
+                delayComponentLoading: false,
+                synchronousExecution: true            }
+        };
+
+        var keys = Object.keys(ns.config);
+        for (var i = 0; i < keys.length; ++i) {
+          setup[keys[i]] = ns.config[keys[i]];
+        };
+
+        SRLive.configureClient(setup);
+        ns.configured = true;
+    }
+
+    function injectAssets(package, callback) {
+        // Add CSS assets for package
+        injectCSSAssets(package);
+        // Add JavaScript assets for package
+        injectJSAssets(package, function() {
+            // Initialize SRLive and invoke caller's callback method
+            initSRLive();
+            if (callback) {
+                callback();
+            }
+        });
+    }
+
+    function injectComponents(components, callback) {
+
+        if (components.length <= 0) {
+            callback();
+            return;
+        }
+
+        // duplicate components array
+        var loadedComponents = {};
+        for (var i = 0; i < components.length; i++) {
+            loadedComponents[components[i]] = false;
+        }
+
+        // load components from components parameter
+        for (var i = 0; i < components.length; i++) {
+            var widget = components[i];
+            SRLive.w.add({
+                name: widget,
+                callback: function(component) {
+                    var name = component.className;
+                    delete loadedComponents[name];
+                    if (Object.keys(loadedComponents).length <= 0) {
+                        callback();
+                    }
+                },
+                callbackScope: window
+            });
+            //SRLive.w.loadDelayedComponents();
+        }
+    }
+
+    function removeObsoleteAssets(assets) {
+        var assetsToRemove = [];
+        for (var i = 0; i < assets.length; ++i) {
+            var asset = assets[i];
+            if (getRefCount(asset) <= 0) {
+                assetsToRemove.push(asset);
+                delete ns.assets[asset.type][asset.url];
+            }
+        }
+
+        if (ns.configured && Object.keys(ns.assets.js).length == 0 && typeof SRLive !== 'undefined' && SRLive.destroy) {
+            // Destroy SRLive. Assets packages setup and dependencies must ensure that the package containing
+            // SRLive is an explicit or implicit dependency of all other packages.  Therefore, SRLive will be
+            // removed only when the last JS assets are removed from the page.
+            SRLive.destroy();
+            ns.configured = false;
+        }
+
+        // Remove the elements from the DOM
+        for (var i = 0; i < assetsToRemove.length; ++i) {
+            var asset = assetsToRemove[i];
+            var element = document.getElementById(asset.id);
+            if (element && element.parentNode) {
+                element.parentNode.removeChild(element);
+            }
+        }
+    }
+
+    function removeAssets(package) {
+        var assets = getAssets(package, 'css').concat(getAssets(package, 'js'));
+        for (var i = 0; i < assets.length; ++i) {
+            removeReference(assets[i], package);
+        }
+        removeObsoleteAssets(assets);
+    }
+
+    function removeAllAssets() {
+        var assets = [];
+        var assetTypes = ['js', 'css'];
+
+        for (var i = 0; i < assetTypes.length; ++i) {
+            var assetCollection = ns.assets[assetTypes[i]];
+            var urls = Object.keys(assetCollection);
+            for (var j = 0; j < urls.length; ++j) {
+                var asset = assetCollection[urls[j]];
+                removeAllReferences(asset);
+                assets.push(asset);
+            }
+        }
+
+        removeObsoleteAssets(assets);
+
+        /* remove widget specific styles */
+        // var assetsToRemove = [];
+        // var widgetStyles = document.getElementsByClassName('sr-widget-style');
+        // for (var i = 0; i < widgetStyles.length; i++) {
+        //     assetsToRemove.push(widgetStyles[i]);
+        // }
+        // for (var i = 0; i < assetsToRemove.length; i++) {
+        //     var element = assetsToRemove[i];
+        //     if (element && element.parentNode) {
+        //         element.parentNode.removeChild(element);
+        //     }
+        // }
+
+    }
+
+    function inferBaseUrl() {
+
+        var path;
+        if (document.currentScript) {
+            path = document.currentScript.src;
+        }
+        else {
+            var scripts = document.getElementsByTagName('script');
+            var testExp = /\/\?\/scigamingscigamingcdn\/zh\/(.+\/)?page\/vswidgets/;
+            for (var i = 0; i < scripts.length; ++i) {
+                var src = scripts[i].src;
+                if (!src) continue;
+                var match = testExp.exec(src);
+                if (match && match.index > 0 && src.indexOf('?') > 0) {
+                    path = src;
+                    break;
+                }
+            }   
+        }
+
+        var pos = path.indexOf('?');
+        path = (pos > 0) ? path.substring(0, pos) : path;
+        return path.replace(/\/+$/,'') + '/';
+    }
+
+    /**
+     * Adds a new widget to the page and loads any necessary assets.
+     *
+     * @param {string} widget The widget type to load.
+     * @param {Object} options Widget configuration/initialization options.
+     * @param {function} callback Function to be invoked when the widget is loaded
+     * @return {string} A unique handle to be used in calls to removeWidget().
+     */
+     ns.addWidget = function(widget, options, callback) {
+
+        var id = constructWidgetId();
+        ns.widgets[id] = null;
+
+        injectAssets(getAssetsPackage(widget), function() {
+
+            // inject component dependencies
+            injectComponents(getComponentPackages(widget), function() {
+
+                // check if we can, and still want to add the widget when the async callback is invoked
+                if (typeof SRLive !== 'undefined' && SRLive.w && ns.widgets[id] === null) {
+                    ns.widgets[id] = SRLive.w.add({
+                        name: widget,
+                        config: options,
+                        callback: callback,
+                        callbackScope: window
+                    });
+                    SRLive.w.loadDelayedComponents();
+                }
+
+            });
+        });
+
+        return id;
+    }
+
+    /**
+     * Removes a widget from the page. Note that assets that may have been loaded into the page when the widget
+     * was added will not be automatically deleted from the page.
+     *
+     * @param {string} widgetId The handle returned from addWidget.
+     */
+    ns.removeWidget = function(widgetId) {
+        // signal that we don't want to load the widget if we are still loading assets in the background
+        var handle = ns.widgets[widgetId];
+        delete ns.widgets[widgetId];
+
+        // remove the widget if we can, and if we ever got so far as to load it in the first place
+        if (typeof SRLive !== 'undefined' && SRLive.w && typeof handle != 'undefined' && handle !== null) {
+            SRLive.w.remove(handle);
+        }
+    }
+
+    /**
+     * Used for pre-loading assets. Only use if you know what you are doing.
+     *
+     * @param {string} package The assets package to load.
+     * @param {function} callback An optional callback that will be invoked when assets are loaded.
+     */
+    ns.loadAssets = function(package, callback) {
+        injectAssets(package, callback);
+    };
+
+    /**
+     * Used for cleaning up specific assets. Only use if you *really* know what you are doing.
+     *
+     * @param {string} package The assets package to remove.
+     */
+    ns.unloadAssets = function(package) {
+        removeAssets(package, callback);
+    };
+
+    /**
+     * Used for total clean-up. All widgets will be removed and all assets will be unloaded.
+     */
+    ns.clean = function() {
+        var keys = Object.keys(ns.widgets);
+        var handles = [];
+        for (var i = 0; i < keys.length; ++i) {
+            var handle = ns.widgets[keys[i]];
+            if (typeof handle != 'undefined' && handle !== null) {
+                handles.push(handle);
+            }
+        }
+        ns.widgets = {};
+
+        for (var i = 0; i < handles.length; ++i) {
+            if (typeof SRLive !== 'undefined' && SRLive.w) {
+                SRLive.w.remove(handles[i]);
+            }
+        }
+
+        removeAllAssets();
+    };
+
+    ns.setConfig = function(key, options) {
+      if (!options) {
+        ns.clearConfig(key);
+        return;
+      }
+
+      ns.config[key] = options;
+      if (ns.configured && typeof SRLive !== 'undefined' && SRLive.setup) {
+        SRLive.setup[key] = options;
+      }
+    };
+
+    ns.clearConfig = function(key) {
+      if (ns.configured && typeof SRLive !== 'undefined' && SRLive.setup) {
+        delete SRLive.setup[key];
+      }
+      delete ns.config[key];
+    };
+
+}(window.vswidgets = window.vswidgets || {}));
+
+; (function(ns) {
+ns.domainSuffix = '.live.vsports.cloud';
+ns.legacyDomainSuffix = '';
+} (window.vswidgets = window.vswidgets));; (function(ns) {
+
+    /** global definitions **/
+    ns.loader = ns.loader || null;
+
+    ns.init = function(options) {
+        if (ns.loader) {
+            console.log('Widgets are already initialized.');
+            return ns.loader;
+        }
+        ns.loader = new Loader(options);
+        return ns.loader;
+    };
+
+    function Widget(widgetConfig) {
+
+        var Status = {
+            INITIALIZING: 'INITIALIZING',
+            INITIALIZED: 'INITIALIZED',
+            DESTROYED: 'DESTROYED'
+        };
+
+        this.status = Status.INITIALIZING;
+        this.onLoadCallback = widgetConfig.onLoad;
+        this.api = {};
+        this.handle = undefined;
+        this.container = widgetConfig.container;
+        this.options = widgetConfig.options || {};
+        this.name = widgetConfig.widget;
+
+        Widget.prototype.loaded = function (widget) {
+            if (widget.publicAPI) {
+                this.api = widget.publicAPI();
+            }
+            this.status = Status.INITIALIZED;
+            if (SRUtil.isFunction(this.onLoadCallback)) {
+                this.onLoadCallback(this);
+            }
+        };
+
+        Widget.prototype.destroy = function() {
+            ns.removeWidget(this.handle);
+            this.status = Status.DESTROYED;
+        };
+
+    }
+
+    function Loader(options) {
+        /*
+         * Public properties
+         */
+        this.options = options || {};
+        this.widgets = [];
+
+        var self = this;
+        var maintenanceSubscription = null;
+        var oddsOverrideRegistered = false;
+
+        ns.setConfig('vsw', options);
+
+        var updateMaintenanceEventSubscription = function() {
+            if (typeof SRLive === 'undefined') {
+                return; // SRLive not yet initialized
+            }
+
+            if (maintenanceSubscription == SRUtil.isFunction(self.options.maintenanceCallback)) {
+                return; // No need to do anything
+            }
+
+            if (!maintenanceSubscription) {
+                // need to subscribe
+                maintenanceSubscription = SRLive.event.subscribe('vsmobile:maintenance', function(data) {
+                    // double-check the current callback handler setting in the async method
+                    if (SRUtil.isFunction(self.options.maintenanceCallback)) {
+                        self.options.maintenanceCallback.apply(window, data);
+                    }
+                });
+            }
+            else if (maintenanceSubscription) {
+                // need to unsubscribe
+                SRLive.event.unsubscribe(maintenanceSubscription);
+                maintenanceSubscription = null;
+            }
+        }
+
+        var updateOddsOverrideHandler = function() {
+            if (typeof SRLive == 'undefined') {
+                return; // SRLive not yet initialized
+            }
+
+            if (oddsOverrideRegistered == SRUtil.isFunction(self.options.oddsOverrideCallback)) {
+                return; // No need to change anything
+            }
+
+            var markets = SRLive.w.get('vswidgets.core.data.markets');
+            if (!markets) {
+                return; // Market manager singleton not yet initialized
+            }
+
+            if (!oddsOverrideRegistered) {
+                // need to register the override handler
+                markets.setOddsOverrideHandler(function(meta, oddsSuggestions, callback) {
+                    if (self.options.oddsOverrideCallback) {
+                        // use customer-supplied override handler
+                        self.options.oddsOverrideCallback.call(window, meta, oddsSuggestions, callback);
+                    }
+                    else {
+                        // no odds overrides
+                        callback(oddsSuggestions);
+                    }
+                });
+                oddsOverrideRegistered = true;
+            }
+            else {
+                // need to unregister the override handler
+                markets.setOddsOverrideHandler(null);
+                oddsOverrideRegistered = false;
+            }
+        }
+
+        var postInit = function() {
+            updateMaintenanceEventSubscription();
+            updateOddsOverrideHandler();
+        }
+
+        /*
+         * Public API
+         */
+        this.addWidget = function(widgetConfig) {
+            if (!widgetConfig || !widgetConfig.widget || !widgetConfig.container) {
+                return;
+            }
+            var widgetOptions = widgetConfig.options || {};
+            widgetOptions.container = widgetConfig.container;
+
+            var widgetName = 'vswidgets.' + widgetConfig.widget;
+
+            var widget = new Widget(widgetConfig);
+
+            var handle = (function(widget){
+                    return ns.addWidget(widgetName, widgetOptions, function(component) {
+                        component._widget = widget;
+                        widget._component = component
+                        widget.loaded(component);
+                        postInit.call(self);
+                    });
+            }(widget));
+
+            widget.handle = handle;
+            this.widgets.push(widget);
+
+            return widget;
+        };
+
+        this.destroy = function() {
+            for (var i = 0; i < this.widgets.length; i++) {
+                this.widgets[i].destroy();
+            }
+
+            ns.clean();
+            ns.instance = null;
+        };
+
+        this.getOptions = function() {
+            return this.options;
+        };
+
+        this.setMaintenanceCallback = function (callback) {
+            this.options.maintenanceCallback = callback;
+            updateMaintenanceEventSubscription();
+        };
+
+        this.setOddsOverrideHandler = function (callback) {
+            this.options.oddsOverrideCallback = callback;
+            updateOddsOverrideHandler();
+        };
+    }
+
+} (window.vswidgets = window.vswidgets || {}));
