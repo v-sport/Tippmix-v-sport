@@ -1,0 +1,915 @@
+match_id,season,round,home,away,market,value,status
+1387287299,2993866,21,Newcastle,Manchester Kék,1,4.20,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,3.70,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,1.65,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,1.12,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,4.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,1.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,2.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,2.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,1.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,9.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,5.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,1.18,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,2.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,3.60,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,2.70,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,1.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,4.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,5.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,2.15,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,23.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,1.55,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,3.90,open
+1387287299,2993866,21,Newcastle,Manchester Kék,x,2.55,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,2.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,3.05,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,1.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,4.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,1.16,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,1.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,1.85,open
+1387287299,2993866,21,Newcastle,Manchester Kék,u,1.18,open
+1387287299,2993866,21,Newcastle,Manchester Kék,o,3.85,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0:0,22.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1:0,12.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2:0,35.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3:0,50.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0:1,9.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1:1,7.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2:1,12.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3:1,40.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0:2,9.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1:2,6.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2:2,8.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3:2,35.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0:3,10.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1:3,9.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2:3,20.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3:3,35.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,other,5.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1X,1.85,open
+1387287299,2993866,21,Newcastle,Manchester Kék,12,1.20,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X2,1.18,open
+1387287299,2993866,21,Newcastle,Manchester Kék,odd,1.85,open
+1387287299,2993866,21,Newcastle,Manchester Kék,even,1.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,first half,2.40,open
+1387287299,2993866,21,Newcastle,Manchester Kék,second half,2.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,equals,3.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0,25.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,6.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,4.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3,3.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,4,3.90,open
+1387287299,2993866,21,Newcastle,Manchester Kék,5,9.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,6+,9.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,2.85,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,1.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,1.40,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,2.55,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,1.07,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,5.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,5.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,1.09,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,2.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,1.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,under,1.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,over,2.70,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1 + under,14.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X + under,24.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2 + under,10.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1 + over,5.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X + over,4.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2 + over,1.80,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1 + under,10.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X + under,6.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2 + under,5.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1 + over,6.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X + over,7.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2 + over,2.15,open
+1387287299,2993866,21,Newcastle,Manchester Kék,both,1.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,only home,8.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,only away,3.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,none,25.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1X,1.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,12,1.30,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X2,1.16,open
+1387287299,2993866,21,Newcastle,Manchester Kék,yes,1.55,open
+1387287299,2993866,21,Newcastle,Manchester Kék,no,2.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,11,7.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1X,11.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,12,29.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X1,10.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,XX,7.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,X2,5.25,open
+1387287299,2993866,21,Newcastle,Manchester Kék,21,52.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2X,14.50,open
+1387287299,2993866,21,Newcastle,Manchester Kék,22,2.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0,3.10,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,2.45,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,3.95,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3,11.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,4+,31.00,open
+1387287299,2993866,21,Newcastle,Manchester Kék,0,6.75,open
+1387287299,2993866,21,Newcastle,Manchester Kék,1,3.60,open
+1387287299,2993866,21,Newcastle,Manchester Kék,2,2.95,open
+1387287299,2993866,21,Newcastle,Manchester Kék,3,4.35,open
+1387287299,2993866,21,Newcastle,Manchester Kék,4+,8.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,2.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,3.20,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,2.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,2.65,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,2.15,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,1.55,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,3.45,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,1.22,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,4.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,3.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,1.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,12.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,5.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,1.12,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,3.85,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,6.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,1.08,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,5.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,24.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,1.80,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,9.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,2.05,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,2.80,open
+1387287296,2993866,21,Everton,Vörös Ördögök,x,2.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,3.45,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,1.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,1.95,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,2.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,1.45,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,2.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,u,1.09,open
+1387287296,2993866,21,Everton,Vörös Ördögök,o,5.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0:0,8.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1:0,6.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2:0,8.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3:0,25.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0:1,5.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1:1,5.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2:1,9.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3:1,23.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0:2,11.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1:2,12.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2:2,12.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3:2,22.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0:3,50.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1:3,22.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2:3,35.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3:3,50.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,other,14.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1X,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,12,1.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X2,1.45,open
+1387287296,2993866,21,Everton,Vörös Ördögök,odd,1.85,open
+1387287296,2993866,21,Everton,Vörös Ördögök,even,1.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,first half,2.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,second half,2.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,equals,3.10,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0,9.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,3.55,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,3.10,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3,4.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,4,6.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,5,10.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,6+,25.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,2.90,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,1.30,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,1.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,2.30,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,1.09,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,5.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,2.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,1.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,2.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,under,1.06,open
+1387287296,2993866,21,Everton,Vörös Ördögök,over,6.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1 + under,7.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X + under,9.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2 + under,6.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1 + over,3.05,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X + over,4.30,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2 + over,4.10,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1 + under,4.30,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X + under,3.95,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2 + under,4.45,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1 + over,4.30,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X + over,12.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2 + over,5.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,both,1.90,open
+1387287296,2993866,21,Everton,Vörös Ördögök,only home,3.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,only away,4.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,none,10.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1X,1.20,open
+1387287296,2993866,21,Everton,Vörös Ördögök,12,1.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X2,1.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,yes,1.90,open
+1387287296,2993866,21,Everton,Vörös Ördögök,no,1.80,open
+1387287296,2993866,21,Everton,Vörös Ördögök,11,3.60,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1X,13.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,12,64.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X1,5.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,XX,4.75,open
+1387287296,2993866,21,Everton,Vörös Ördögök,X2,6.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,21,80.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2X,19.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,22,4.35,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0,3.15,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,2.70,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,3.65,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3,8.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,4+,32.00,open
+1387287296,2993866,21,Everton,Vörös Ördögök,0,2.85,open
+1387287296,2993866,21,Everton,Vörös Ördögök,1,2.40,open
+1387287296,2993866,21,Everton,Vörös Ördögök,2,4.25,open
+1387287296,2993866,21,Everton,Vörös Ördögök,3,11.50,open
+1387287296,2993866,21,Everton,Vörös Ördögök,4+,38.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,5.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,3.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,1.65,open
+1387287294,2993866,21,Crystal Palace,Chelsea,o,1.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,u,2.20,open
+1387287294,2993866,21,Crystal Palace,Chelsea,o,2.40,open
+1387287294,2993866,21,Crystal Palace,Chelsea,u,1.45,open
+1387287294,2993866,21,Crystal Palace,Chelsea,o,4.30,open
+1387287294,2993866,21,Crystal Palace,Chelsea,u,1.14,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,14.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,5.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,1.12,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,2.05,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,2.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,3.30,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,1.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,5.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,6.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,3.20,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,7.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,1.45,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,5.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,x,2.30,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,1.90,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,3.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,1.22,open
+1387287294,2993866,21,Crystal Palace,Chelsea,u,2.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,o,1.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,u,1.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,o,2.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0:0,6.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1:0,8.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2:0,31.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3:0,50.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0:1,3.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1:1,6.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2:1,18.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3:1,50.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0:2,7.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1:2,8.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2:2,23.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3:2,50.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0:3,10.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1:3,16.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2:3,50.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3:3,50.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,other,10.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1X,1.90,open
+1387287294,2993866,21,Crystal Palace,Chelsea,12,1.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X2,1.14,open
+1387287294,2993866,21,Crystal Palace,Chelsea,odd,1.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,even,1.90,open
+1387287294,2993866,21,Crystal Palace,Chelsea,first half,2.20,open
+1387287294,2993866,21,Crystal Palace,Chelsea,second half,2.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,equals,2.95,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0,7.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,2.95,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,3.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3,4.30,open
+1387287294,2993866,21,Crystal Palace,Chelsea,4,7.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,5,20.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,6+,30.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,under,1.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,over,1.85,open
+1387287294,2993866,21,Crystal Palace,Chelsea,under,1.10,open
+1387287294,2993866,21,Crystal Palace,Chelsea,over,4.90,open
+1387287294,2993866,21,Crystal Palace,Chelsea,under,3.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,over,1.20,open
+1387287294,2993866,21,Crystal Palace,Chelsea,under,1.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,over,2.20,open
+1387287294,2993866,21,Crystal Palace,Chelsea,under,1.15,open
+1387287294,2993866,21,Crystal Palace,Chelsea,over,4.10,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1 + under,10.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X + under,7.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2 + under,3.95,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1 + over,9.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X + over,5.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2 + over,2.40,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1 + under,7.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X + under,3.60,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2 + under,2.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1 + over,12.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X + over,24.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2 + over,3.15,open
+1387287294,2993866,21,Crystal Palace,Chelsea,both,2.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,only home,7.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,only away,2.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,none,7.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1X,1.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,12,1.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X2,1.10,open
+1387287294,2993866,21,Crystal Palace,Chelsea,yes,2.35,open
+1387287294,2993866,21,Crystal Palace,Chelsea,no,1.50,open
+1387287294,2993866,21,Crystal Palace,Chelsea,11,8.75,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1X,15.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,12,100.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X1,12.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,XX,5.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,X2,5.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,21,78.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2X,16.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,22,2.15,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0,1.80,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,2.55,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,8.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3,31.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,4+,100.00,open
+1387287294,2993866,21,Crystal Palace,Chelsea,0,4.05,open
+1387287294,2993866,21,Crystal Palace,Chelsea,1,2.40,open
+1387287294,2993866,21,Crystal Palace,Chelsea,2,4.10,open
+1387287294,2993866,21,Crystal Palace,Chelsea,3,7.25,open
+1387287294,2993866,21,Crystal Palace,Chelsea,4+,14.50,open
+1387287292,2993866,21,Liverpool,West Ham,1,1.22,open
+1387287292,2993866,21,Liverpool,West Ham,x,5.50,open
+1387287292,2993866,21,Liverpool,West Ham,2,10.00,open
+1387287292,2993866,21,Liverpool,West Ham,o,1.20,open
+1387287292,2993866,21,Liverpool,West Ham,u,3.65,open
+1387287292,2993866,21,Liverpool,West Ham,o,1.65,open
+1387287292,2993866,21,Liverpool,West Ham,u,2.00,open
+1387287292,2993866,21,Liverpool,West Ham,o,2.55,open
+1387287292,2993866,21,Liverpool,West Ham,u,1.40,open
+1387287292,2993866,21,Liverpool,West Ham,1,1.70,open
+1387287292,2993866,21,Liverpool,West Ham,x,3.45,open
+1387287292,2993866,21,Liverpool,West Ham,2,3.75,open
+1387287292,2993866,21,Liverpool,West Ham,1,2.80,open
+1387287292,2993866,21,Liverpool,West Ham,x,3.70,open
+1387287292,2993866,21,Liverpool,West Ham,2,1.90,open
+1387287292,2993866,21,Liverpool,West Ham,1,1.20,open
+1387287292,2993866,21,Liverpool,West Ham,x,13.25,open
+1387287292,2993866,21,Liverpool,West Ham,2,4.20,open
+1387287292,2993866,21,Liverpool,West Ham,1,1.50,open
+1387287292,2993866,21,Liverpool,West Ham,x,2.60,open
+1387287292,2993866,21,Liverpool,West Ham,2,9.25,open
+1387287292,2993866,21,Liverpool,West Ham,1,1.05,open
+1387287292,2993866,21,Liverpool,West Ham,2,6.25,open
+1387287292,2993866,21,Liverpool,West Ham,u,3.65,open
+1387287292,2993866,21,Liverpool,West Ham,o,1.20,open
+1387287292,2993866,21,Liverpool,West Ham,u,1.70,open
+1387287292,2993866,21,Liverpool,West Ham,o,1.95,open
+1387287292,2993866,21,Liverpool,West Ham,u,1.15,open
+1387287292,2993866,21,Liverpool,West Ham,o,4.15,open
+1387287292,2993866,21,Liverpool,West Ham,0:0,13.25,open
+1387287292,2993866,21,Liverpool,West Ham,1:0,5.75,open
+1387287292,2993866,21,Liverpool,West Ham,2:0,4.70,open
+1387287292,2993866,21,Liverpool,West Ham,3:0,6.75,open
+1387287292,2993866,21,Liverpool,West Ham,0:1,19.50,open
+1387287292,2993866,21,Liverpool,West Ham,1:1,11.00,open
+1387287292,2993866,21,Liverpool,West Ham,2:1,7.25,open
+1387287292,2993866,21,Liverpool,West Ham,3:1,12.50,open
+1387287292,2993866,21,Liverpool,West Ham,0:2,50.00,open
+1387287292,2993866,21,Liverpool,West Ham,1:2,39.00,open
+1387287292,2993866,21,Liverpool,West Ham,2:2,27.00,open
+1387287292,2993866,21,Liverpool,West Ham,3:2,34.00,open
+1387287292,2993866,21,Liverpool,West Ham,0:3,50.00,open
+1387287292,2993866,21,Liverpool,West Ham,1:3,50.00,open
+1387287292,2993866,21,Liverpool,West Ham,2:3,50.00,open
+1387287292,2993866,21,Liverpool,West Ham,3:3,50.00,open
+1387287292,2993866,21,Liverpool,West Ham,other,3.30,open
+1387287292,2993866,21,Liverpool,West Ham,1X,1.05,open
+1387287292,2993866,21,Liverpool,West Ham,12,1.09,open
+1387287292,2993866,21,Liverpool,West Ham,X2,2.90,open
+1387287292,2993866,21,Liverpool,West Ham,odd,1.85,open
+1387287292,2993866,21,Liverpool,West Ham,even,1.80,open
+1387287292,2993866,21,Liverpool,West Ham,first half,2.25,open
+1387287292,2993866,21,Liverpool,West Ham,second half,2.60,open
+1387287292,2993866,21,Liverpool,West Ham,equals,3.15,open
+1387287292,2993866,21,Liverpool,West Ham,0,15.50,open
+1387287292,2993866,21,Liverpool,West Ham,1,5.25,open
+1387287292,2993866,21,Liverpool,West Ham,2,3.65,open
+1387287292,2993866,21,Liverpool,West Ham,3,3.80,open
+1387287292,2993866,21,Liverpool,West Ham,4,4.90,open
+1387287292,2993866,21,Liverpool,West Ham,5,8.50,open
+1387287292,2993866,21,Liverpool,West Ham,6+,11.50,open
+1387287292,2993866,21,Liverpool,West Ham,under,5.75,open
+1387287292,2993866,21,Liverpool,West Ham,over,1.07,open
+1387287292,2993866,21,Liverpool,West Ham,under,2.70,open
+1387287292,2993866,21,Liverpool,West Ham,over,1.35,open
+1387287292,2993866,21,Liverpool,West Ham,under,1.55,open
+1387287292,2993866,21,Liverpool,West Ham,over,2.15,open
+1387287292,2993866,21,Liverpool,West Ham,under,1.60,open
+1387287292,2993866,21,Liverpool,West Ham,over,2.05,open
+1387287292,2993866,21,Liverpool,West Ham,under,1.08,open
+1387287292,2993866,21,Liverpool,West Ham,over,5.50,open
+1387287292,2993866,21,Liverpool,West Ham,1 + under,6.00,open
+1387287292,2993866,21,Liverpool,West Ham,X + under,13.75,open
+1387287292,2993866,21,Liverpool,West Ham,2 + under,21.00,open
+1387287292,2993866,21,Liverpool,West Ham,1 + over,1.40,open
+1387287292,2993866,21,Liverpool,West Ham,X + over,8.00,open
+1387287292,2993866,21,Liverpool,West Ham,2 + over,17.00,open
+1387287292,2993866,21,Liverpool,West Ham,1 + under,2.95,open
+1387287292,2993866,21,Liverpool,West Ham,X + under,6.75,open
+1387287292,2993866,21,Liverpool,West Ham,2 + under,16.00,open
+1387287292,2993866,21,Liverpool,West Ham,1 + over,1.75,open
+1387287292,2993866,21,Liverpool,West Ham,X + over,25.00,open
+1387287292,2993866,21,Liverpool,West Ham,2 + over,25.00,open
+1387287292,2993866,21,Liverpool,West Ham,both,2.35,open
+1387287292,2993866,21,Liverpool,West Ham,only home,1.75,open
+1387287292,2993866,21,Liverpool,West Ham,only away,15.50,open
+1387287292,2993866,21,Liverpool,West Ham,none,15.50,open
+1387287292,2993866,21,Liverpool,West Ham,1X,1.05,open
+1387287292,2993866,21,Liverpool,West Ham,12,1.25,open
+1387287292,2993866,21,Liverpool,West Ham,X2,1.80,open
+1387287292,2993866,21,Liverpool,West Ham,yes,2.40,open
+1387287292,2993866,21,Liverpool,West Ham,no,1.50,open
+1387287292,2993866,21,Liverpool,West Ham,11,1.60,open
+1387287292,2993866,21,Liverpool,West Ham,1X,25.00,open
+1387287292,2993866,21,Liverpool,West Ham,12,100.00,open
+1387287292,2993866,21,Liverpool,West Ham,X1,4.15,open
+1387287292,2993866,21,Liverpool,West Ham,XX,8.00,open
+1387287292,2993866,21,Liverpool,West Ham,X2,22.00,open
+1387287292,2993866,21,Liverpool,West Ham,21,27.00,open
+1387287292,2993866,21,Liverpool,West Ham,2X,37.00,open
+1387287292,2993866,21,Liverpool,West Ham,22,20.00,open
+1387287292,2993866,21,Liverpool,West Ham,0,8.50,open
+1387287292,2993866,21,Liverpool,West Ham,1,4.35,open
+1387287292,2993866,21,Liverpool,West Ham,2,3.20,open
+1387287292,2993866,21,Liverpool,West Ham,3,4.85,open
+1387287292,2993866,21,Liverpool,West Ham,4+,4.10,open
+1387287292,2993866,21,Liverpool,West Ham,0,1.60,open
+1387287292,2993866,21,Liverpool,West Ham,1,2.80,open
+1387287292,2993866,21,Liverpool,West Ham,2,8.75,open
+1387287292,2993866,21,Liverpool,West Ham,3,66.00,open
+1387287292,2993866,21,Liverpool,West Ham,4+,100.00,open
+1387287293,2993866,21,Brentford,Brighton,1,1.65,open
+1387287293,2993866,21,Brentford,Brighton,x,3.20,open
+1387287293,2993866,21,Brentford,Brighton,2,5.25,open
+1387287293,2993866,21,Brentford,Brighton,o,1.40,open
+1387287293,2993866,21,Brentford,Brighton,u,2.50,open
+1387287293,2993866,21,Brentford,Brighton,o,2.35,open
+1387287293,2993866,21,Brentford,Brighton,u,1.45,open
+1387287293,2993866,21,Brentford,Brighton,o,4.50,open
+1387287293,2993866,21,Brentford,Brighton,u,1.12,open
+1387287293,2993866,21,Brentford,Brighton,1,2.95,open
+1387287293,2993866,21,Brentford,Brighton,x,3.20,open
+1387287293,2993866,21,Brentford,Brighton,2,2.00,open
+1387287293,2993866,21,Brentford,Brighton,1,7.25,open
+1387287293,2993866,21,Brentford,Brighton,x,4.10,open
+1387287293,2993866,21,Brentford,Brighton,2,1.30,open
+1387287293,2993866,21,Brentford,Brighton,1,1.12,open
+1387287293,2993866,21,Brentford,Brighton,x,5.25,open
+1387287293,2993866,21,Brentford,Brighton,2,14.00,open
+1387287293,2993866,21,Brentford,Brighton,1,1.55,open
+1387287293,2993866,21,Brentford,Brighton,x,7.00,open
+1387287293,2993866,21,Brentford,Brighton,2,2.75,open
+1387287293,2993866,21,Brentford,Brighton,1,2.20,open
+1387287293,2993866,21,Brentford,Brighton,x,2.10,open
+1387287293,2993866,21,Brentford,Brighton,2,4.60,open
+1387287293,2993866,21,Brentford,Brighton,1,1.22,open
+1387287293,2993866,21,Brentford,Brighton,2,3.45,open
+1387287293,2993866,21,Brentford,Brighton,u,2.55,open
+1387287293,2993866,21,Brentford,Brighton,o,1.40,open
+1387287293,2993866,21,Brentford,Brighton,u,1.30,open
+1387287293,2993866,21,Brentford,Brighton,o,3.00,open
+1387287293,2993866,21,Brentford,Brighton,0:0,6.50,open
+1387287293,2993866,21,Brentford,Brighton,1:0,5.00,open
+1387287293,2993866,21,Brentford,Brighton,2:0,5.25,open
+1387287293,2993866,21,Brentford,Brighton,3:0,13.25,open
+1387287293,2993866,21,Brentford,Brighton,0:1,8.25,open
+1387287293,2993866,21,Brentford,Brighton,1:1,5.75,open
+1387287293,2993866,21,Brentford,Brighton,2:1,6.50,open
+1387287293,2993866,21,Brentford,Brighton,3:1,14.75,open
+1387287293,2993866,21,Brentford,Brighton,0:2,25.00,open
+1387287293,2993866,21,Brentford,Brighton,1:2,21.00,open
+1387287293,2993866,21,Brentford,Brighton,2:2,21.00,open
+1387287293,2993866,21,Brentford,Brighton,3:2,50.00,open
+1387287293,2993866,21,Brentford,Brighton,0:3,50.00,open
+1387287293,2993866,21,Brentford,Brighton,1:3,50.00,open
+1387287293,2993866,21,Brentford,Brighton,2:3,50.00,open
+1387287293,2993866,21,Brentford,Brighton,3:3,50.00,open
+1387287293,2993866,21,Brentford,Brighton,other,12.25,open
+1387287293,2993866,21,Brentford,Brighton,1X,1.14,open
+1387287293,2993866,21,Brentford,Brighton,12,1.25,open
+1387287293,2993866,21,Brentford,Brighton,X2,1.85,open
+1387287293,2993866,21,Brentford,Brighton,odd,1.90,open
+1387287293,2993866,21,Brentford,Brighton,even,1.75,open
+1387287293,2993866,21,Brentford,Brighton,first half,2.70,open
+1387287293,2993866,21,Brentford,Brighton,second half,2.40,open
+1387287293,2993866,21,Brentford,Brighton,equals,2.75,open
+1387287293,2993866,21,Brentford,Brighton,0,7.25,open
+1387287293,2993866,21,Brentford,Brighton,1,3.65,open
+1387287293,2993866,21,Brentford,Brighton,2,2.95,open
+1387287293,2993866,21,Brentford,Brighton,3,4.00,open
+1387287293,2993866,21,Brentford,Brighton,4,7.50,open
+1387287293,2993866,21,Brentford,Brighton,5,20.00,open
+1387287293,2993866,21,Brentford,Brighton,6+,30.00,open
+1387287293,2993866,21,Brentford,Brighton,under,3.35,open
+1387287293,2993866,21,Brentford,Brighton,over,1.22,open
+1387287293,2993866,21,Brentford,Brighton,under,1.65,open
+1387287293,2993866,21,Brentford,Brighton,over,1.95,open
+1387287293,2993866,21,Brentford,Brighton,under,1.14,open
+1387287293,2993866,21,Brentford,Brighton,over,4.35,open
+1387287293,2993866,21,Brentford,Brighton,under,1.90,open
+1387287293,2993866,21,Brentford,Brighton,over,1.75,open
+1387287293,2993866,21,Brentford,Brighton,under,1.10,open
+1387287293,2993866,21,Brentford,Brighton,over,5.00,open
+1387287293,2993866,21,Brentford,Brighton,1 + under,5.50,open
+1387287293,2993866,21,Brentford,Brighton,X + under,7.25,open
+1387287293,2993866,21,Brentford,Brighton,2 + under,9.50,open
+1387287293,2993866,21,Brentford,Brighton,1 + over,2.10,open
+1387287293,2993866,21,Brentford,Brighton,X + over,5.00,open
+1387287293,2993866,21,Brentford,Brighton,2 + over,9.75,open
+1387287293,2993866,21,Brentford,Brighton,1 + under,3.00,open
+1387287293,2993866,21,Brentford,Brighton,X + under,3.50,open
+1387287293,2993866,21,Brentford,Brighton,2 + under,7.25,open
+1387287293,2993866,21,Brentford,Brighton,1 + over,3.05,open
+1387287293,2993866,21,Brentford,Brighton,X + over,23.00,open
+1387287293,2993866,21,Brentford,Brighton,2 + over,14.50,open
+1387287293,2993866,21,Brentford,Brighton,both,2.25,open
+1387287293,2993866,21,Brentford,Brighton,only home,2.45,open
+1387287293,2993866,21,Brentford,Brighton,only away,6.75,open
+1387287293,2993866,21,Brentford,Brighton,none,7.50,open
+1387287293,2993866,21,Brentford,Brighton,1X,1.14,open
+1387287293,2993866,21,Brentford,Brighton,12,1.45,open
+1387287293,2993866,21,Brentford,Brighton,X2,1.40,open
+1387287293,2993866,21,Brentford,Brighton,yes,2.30,open
+1387287293,2993866,21,Brentford,Brighton,no,1.55,open
+1387287293,2993866,21,Brentford,Brighton,11,2.45,open
+1387287293,2993866,21,Brentford,Brighton,1X,21.00,open
+1387287293,2993866,21,Brentford,Brighton,12,64.00,open
+1387287293,2993866,21,Brentford,Brighton,X1,4.60,open
+1387287293,2993866,21,Brentford,Brighton,XX,4.80,open
+1387287293,2993866,21,Brentford,Brighton,X2,12.00,open
+1387287293,2993866,21,Brentford,Brighton,21,27.00,open
+1387287293,2993866,21,Brentford,Brighton,2X,13.00,open
+1387287293,2993866,21,Brentford,Brighton,22,9.25,open
+1387287293,2993866,21,Brentford,Brighton,0,3.80,open
+1387287293,2993866,21,Brentford,Brighton,1,2.95,open
+1387287293,2993866,21,Brentford,Brighton,2,3.15,open
+1387287293,2993866,21,Brentford,Brighton,3,7.75,open
+1387287293,2993866,21,Brentford,Brighton,4+,16.00,open
+1387287293,2993866,21,Brentford,Brighton,0,1.90,open
+1387287293,2993866,21,Brentford,Brighton,1,2.30,open
+1387287293,2993866,21,Brentford,Brighton,2,8.00,open
+1387287293,2993866,21,Brentford,Brighton,3,37.00,open
+1387287293,2993866,21,Brentford,Brighton,4+,100.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,1.70,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,3.60,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,4.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,1.40,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,2.55,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,2.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,1.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,4.05,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,1.16,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,3.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,3.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,2.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,7.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,4.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,1.30,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,1.16,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,4.85,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,11.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,1.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,8.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,2.80,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,2.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,x,2.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,4.60,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,1.30,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,3.05,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,2.65,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,1.35,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,1.30,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,2.95,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,u,1.06,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,o,6.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0:0,7.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1:0,4.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2:0,5.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3:0,13.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0:1,8.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1:1,6.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2:1,7.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3:1,15.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0:2,23.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1:2,13.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2:2,25.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3:2,39.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0:3,50.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1:3,39.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2:3,50.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3:3,50.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,other,10.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1X,1.18,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,12,1.22,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X2,1.85,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,odd,1.85,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,even,1.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,first half,2.80,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,second half,2.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,equals,2.95,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0,8.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,3.55,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,3.10,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3,4.05,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,4,7.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,5,18.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,6+,29.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,under,3.65,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,over,1.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,under,1.65,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,over,2.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,under,1.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,over,4.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,under,1.90,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,over,1.70,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,under,1.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,over,4.10,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1 + under,5.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X + under,8.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2 + under,9.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1 + over,2.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X + over,5.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2 + over,6.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1 + under,2.95,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X + under,3.90,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2 + under,7.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1 + over,3.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X + over,26.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2 + over,8.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,both,2.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,only home,2.40,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,only away,7.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,none,8.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1X,1.14,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,12,1.40,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X2,1.40,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,yes,2.20,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,no,1.60,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,11,2.45,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1X,20.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,12,64.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X1,4.65,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,XX,5.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,X2,10.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,21,40.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2X,17.75,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,22,7.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0,4.15,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,2.65,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,3.40,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3,7.50,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,4+,15.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,0,1.95,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,1,2.60,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,2,6.25,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,3,24.00,open
+1387287297,2993866,21,Fulham,Aston Oroszlán,4+,100.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,1.95,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,3.15,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,3.55,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,1.20,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,3.65,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,1.65,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,1.95,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,2.60,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,1.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,3.45,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,3.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,1.70,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,6.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,5.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,1.22,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,1.22,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,4.90,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,7.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,1.65,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,13.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,2.15,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,2.20,open
+1387287295,2993866,21,Tottenham,London Ágyúk,x,2.30,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,3.85,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,1.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,2.45,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,3.85,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,1.18,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,1.70,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,1.95,open
+1387287295,2993866,21,Tottenham,London Ágyúk,u,1.12,open
+1387287295,2993866,21,Tottenham,London Ágyúk,o,4.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0:0,12.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1:0,8.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2:0,9.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3:0,15.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0:1,10.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1:1,5.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2:1,8.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3:1,14.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0:2,23.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1:2,11.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2:2,9.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3:2,18.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0:3,40.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1:3,23.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2:3,31.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3:3,50.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,other,7.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1X,1.22,open
+1387287295,2993866,21,Tottenham,London Ágyúk,12,1.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X2,1.60,open
+1387287295,2993866,21,Tottenham,London Ágyúk,odd,1.90,open
+1387287295,2993866,21,Tottenham,London Ágyúk,even,1.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,first half,2.30,open
+1387287295,2993866,21,Tottenham,London Ágyúk,second half,2.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,equals,3.10,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0,14.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,5.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,3.55,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3,3.90,open
+1387287295,2993866,21,Tottenham,London Ágyúk,4,4.65,open
+1387287295,2993866,21,Tottenham,London Ágyúk,5,8.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,6+,15.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,4.15,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,1.15,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,1.80,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,1.85,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,1.22,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,3.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,2.85,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,1.30,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,1.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,2.60,open
+1387287295,2993866,21,Tottenham,London Ágyúk,under,1.07,open
+1387287295,2993866,21,Tottenham,London Ágyúk,over,5.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1 + under,9.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X + under,13.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2 + under,11.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1 + over,2.30,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X + over,3.70,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2 + over,4.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1 + under,5.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X + under,4.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2 + under,8.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1 + over,2.80,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X + over,9.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2 + over,5.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,both,1.55,open
+1387287295,2993866,21,Tottenham,London Ágyúk,only home,3.60,open
+1387287295,2993866,21,Tottenham,London Ágyúk,only away,6.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,none,14.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1X,1.16,open
+1387287295,2993866,21,Tottenham,London Ágyúk,12,1.35,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X2,1.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,yes,1.60,open
+1387287295,2993866,21,Tottenham,London Ágyúk,no,2.20,open
+1387287295,2993866,21,Tottenham,London Ágyúk,11,2.70,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1X,12.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,12,54.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X1,6.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,XX,5.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,X2,8.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,21,36.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2X,15.50,open
+1387287295,2993866,21,Tottenham,London Ágyúk,22,5.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0,4.95,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,2.80,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,3.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3,6.25,open
+1387287295,2993866,21,Tottenham,London Ágyúk,4+,10.75,open
+1387287295,2993866,21,Tottenham,London Ágyúk,0,3.10,open
+1387287295,2993866,21,Tottenham,London Ágyúk,1,2.40,open
+1387287295,2993866,21,Tottenham,London Ágyúk,2,4.05,open
+1387287295,2993866,21,Tottenham,London Ágyúk,3,10.00,open
+1387287295,2993866,21,Tottenham,London Ágyúk,4+,43.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,1.55,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,4.15,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,4.55,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,1.16,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,4.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,1.60,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,2.05,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,2.65,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,1.35,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,2.35,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,3.60,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,2.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,4.80,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,4.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,1.45,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,1.15,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,5.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,10.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,1.40,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,15.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,2.70,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,1.90,open
+1387287298,2993866,21,Wolverhampton,Nottingham,x,2.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,4.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,1.22,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,3.40,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,3.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,1.18,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,1.65,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,2.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,u,1.14,open
+1387287298,2993866,21,Wolverhampton,Nottingham,o,4.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0:0,14.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1:0,7.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2:0,6.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3:0,10.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0:1,17.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1:1,7.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2:1,7.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3:1,9.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0:2,28.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1:2,10.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2:2,15.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3:2,21.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0:3,50.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1:3,35.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2:3,50.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3:3,50.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,other,5.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1X,1.15,open
+1387287298,2993866,21,Wolverhampton,Nottingham,12,1.18,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X2,2.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,odd,1.80,open
+1387287298,2993866,21,Wolverhampton,Nottingham,even,1.80,open
+1387287298,2993866,21,Wolverhampton,Nottingham,first half,2.45,open
+1387287298,2993866,21,Wolverhampton,Nottingham,second half,2.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,equals,3.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0,16.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,6.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,3.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3,3.40,open
+1387287298,2993866,21,Wolverhampton,Nottingham,4,5.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,5,7.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,6+,16.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,under,5.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,over,1.09,open
+1387287298,2993866,21,Wolverhampton,Nottingham,under,2.10,open
+1387287298,2993866,21,Wolverhampton,Nottingham,over,1.60,open
+1387287298,2993866,21,Wolverhampton,Nottingham,under,1.35,open
+1387287298,2993866,21,Wolverhampton,Nottingham,over,2.80,open
+1387287298,2993866,21,Wolverhampton,Nottingham,under,2.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,over,1.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,under,1.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,over,3.20,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1 + under,7.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X + under,15.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2 + under,19.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1 + over,1.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X + over,5.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2 + over,5.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1 + under,3.85,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X + under,5.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2 + under,12.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1 + over,2.20,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X + over,14.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2 + over,6.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,both,1.70,open
+1387287298,2993866,21,Wolverhampton,Nottingham,only home,2.60,open
+1387287298,2993866,21,Wolverhampton,Nottingham,only away,11.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,none,16.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1X,1.14,open
+1387287298,2993866,21,Wolverhampton,Nottingham,12,1.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X2,1.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,yes,1.70,open
+1387287298,2993866,21,Wolverhampton,Nottingham,no,2.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,11,2.10,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1X,18.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,12,78.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X1,5.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,XX,7.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,X2,11.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,21,26.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2X,16.75,open
+1387287298,2993866,21,Wolverhampton,Nottingham,22,7.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0,7.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,3.05,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,3.30,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3,4.80,open
+1387287298,2993866,21,Wolverhampton,Nottingham,4+,8.00,open
+1387287298,2993866,21,Wolverhampton,Nottingham,0,2.40,open
+1387287298,2993866,21,Wolverhampton,Nottingham,1,2.50,open
+1387287298,2993866,21,Wolverhampton,Nottingham,2,4.65,open
+1387287298,2993866,21,Wolverhampton,Nottingham,3,17.25,open
+1387287298,2993866,21,Wolverhampton,Nottingham,4+,68.00,open

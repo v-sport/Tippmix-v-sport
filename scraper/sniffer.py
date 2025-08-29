@@ -28,7 +28,7 @@ async def main() -> None:
                     txt = await response.text()
                 except Exception:
                     return
-                rec = {"url": url, "status": response.status, "body": txt[:2000]}
+                rec = {"url": url, "status": response.status, "body": txt}
                 with open(OUT, "a", encoding="utf-8") as f:
                     f.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
@@ -37,7 +37,7 @@ async def main() -> None:
 
         await page.goto(URL, wait_until="load")
         # hagyjuk futni egy ideig, hogy a widgetek betöltsenek és kérdéseket indítsanak
-        await asyncio.sleep(60)
+        await asyncio.sleep(30)
 
         await context.close()
         await browser.close()
