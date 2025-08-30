@@ -52,11 +52,20 @@ def extract_home_away_and_1x2(data: dict) -> Tuple[str, str, List[Tuple[str, str
     teams = data.get("teams", {})
     home = teams.get("home", {}).get("name")
     away = teams.get("away", {}).get("name")
-    odds = []
+    main = {}
+    # Prefer main 1X2 market: _otid == 2 and _fid in {1,2,3}
     for o in data.get("odds", []) or []:
-        m = o.get("fieldname")
-        if m in {"1", "x", "2"}:
-            odds.append((m, o.get("value")))
+        if o.get("_otid") == 2 and (o.get("_fid") in {1, 2, 3}):
+            m = o.get("fieldname")
+            if m in {"1", "x", "2"}:
+                main[m] = o.get("value")
+    # Fallback: first seen 1/x/2 if main not present
+    if not main:
+        for o in data.get("odds", []) or []:
+            m = o.get("fieldname")
+            if m in {"1", "x", "2"} and m not in main:
+                main[m] = o.get("value")
+    odds = [(k, main.get(k)) for k in ["1", "x", "2"] if k in main]
     return home or "", away or "", odds
 
 
