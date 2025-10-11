@@ -1,10 +1,12 @@
 import json
+import os
 import re
 import sys
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 
 from .poller import VfPoller
+from .telegram import send_telegram_message
 
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
@@ -69,11 +71,35 @@ def main() -> int:
             print("[ERROR] poller:", e)
             return 2
 
+    # Send a hello message to Telegram using environment variables
+    if len(sys.argv) > 1 and sys.argv[1] == "hello":
+        token = os.getenv("TELEGRAM_BOT_TOKEN")
+        chat_id = os.getenv("TELEGRAM_CHAT_ID")
+        if not token or not chat_id:
+            print("[ERROR] TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID env vars are required")
+            return 2
+        message = " ".join(sys.argv[2:]) if len(sys.argv) > 2 else "Hello from Tippmix-v-sport bot 👋"
+        try:
+            resp = send_telegram_message(token=token, chat_id=chat_id, text=message)
+            ok = bool(resp.get("ok"))
+            if ok:
+                print("[TELEGRAM] Message sent ✔")
+                return 0
+            else:
+                print("[TELEGRAM] API returned not ok:", json.dumps(resp, ensure_ascii=False))
+                return 2
+        except Exception as e:
+            print("[TELEGRAM] send failed:", e)
+            return 2
+
     ok_vf = test_vf_endpoints()
     ok_vsw = test_vswidgets_loader()
     all_ok = ok_vf and ok_vsw
     print("[RESULT] Selenium required:", "NO" if all_ok else "UNKNOWN/REVIEW")
-    print("Usage: python -m scraper.cli poll [events.jsonl] [events.csv] | poll-once [events.jsonl] [events.csv]")
+    print(
+        "Usage: python -m scraper.cli poll [events.jsonl] [events.csv] | "
+        "poll-once [events.jsonl] [events.csv] | hello [message...]"
+    )
     return 0 if all_ok else 1
 
 
